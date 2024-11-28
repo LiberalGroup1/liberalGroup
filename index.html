@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liberal Group site</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/LR.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+    
+</head>
+<body>
+      <!-- Navigation Menu -->
+  <div class="nav-menu">
+        <div class="nav-container-left">
+            <a href="#reputation" class="nav-item-left">
+                Репутация
+                <div class="games-icon animation-container" data-json="json/Accreditation.json"></div>
+            </a>
+            <a href="#activity" class="nav-item-left">
+                Активность
+                <div class="games-icon animation-container" data-json="json/lightbulb.json"></div>
+            </a>
+        </div>
+        <div class="title-nav-container" onclick="window.location.href='#discord-widget';">
+            <h1 class="main-content-text title-nav">Liberal Group site</h1>
+        </div>
+        <div class="nav-container">
+            <a href="#rules" class="nav-item">
+                <div class="games-icon animation-container" data-json="json/note.json"></div>
+                Конституция
+            </a>
+            <a href="#games" class="nav-item">
+                <div class="games-icon animation-container" data-json="json/Discord.json"></div>
+                Игры
+            </a>
+            <a href="#parties" class="nav-item">
+                <div class="games-icon animation-container" data-json="json/Service.json"></div>
+                Партии
+            </a>
+            <a href="#developers" class="nav-item">
+                <div class="games-icon animation-container" data-json="json/GDPR.json"></div>
+                Разработчики
+            </a>
+            <script>
+                // Получаем все элементы с классом 'animation-container'
+                var animationContainers = document.querySelectorAll(".animation-container");
+        
+                animationContainers.forEach(function(container) {
+                    // Получаем путь к JSON файлу из атрибута data-json
+                    var jsonPath = container.getAttribute("data-json");
+        
+                    var animation = bodymovin.loadAnimation({
+                        container: container,
+                        path: jsonPath,  // Используем путь, указанный в data-json
+                        render: "svg",
+                        loop: false,
+                        autoplay: false,
+                        name: "games icon"
+                    });
+        
+                    // Для элементов с классом nav-item и nav-item-left
+                    var navItems = container.closest(".nav-item, .nav-item-left");  // Находим родительский элемент с классами nav-item или nav-item-left
+        
+                    // Запуск анимации при наведении на nav-item или nav-item-left
+                    navItems.addEventListener("mouseover", function() {
+                        animation.play();
+                    });
+        
+                    // Остановка анимации при уходе курсора с nav-item или nav-item-left
+                    navItems.addEventListener("mouseout", function() {
+                        animation.stop();
+                    });
+                });
+            </script>
+        </div>
+    </div>
+<!-- Button to scroll to top -->
+<button id="scrollTopBtn" class="scroll-top-btn">⬆</button>
+
+<section id="games" class="page">
+    <h2 class="games-title">Во что мы играем?</h2>
+    <div class="container">
+
+        <ul class="games-list">
+                <li class="games-item">
+                    <div class="games-item-inner">
+                        <div class="front">
+                            <img class="games-img" src="img/CS2.jpg" alt="CS2">
+                        </div>
+                        <div class="back">
+                            <p class="title">Counter strike 2</p>
+                            <p class="activity">Активность в группе:<span class="activity-red"> редко</span></p>
+                            <a class="more_button" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="games-item">
+                    <div class="games-item-inner">
+                        <div class="front">
+                            <img class="games-img" src="img/HOI4.png" alt="Hearts of iron4">
+                        </div>
+                        <div class="back">
+                            <video class="background-video" src="video/Luxembourg World Conquest (online-video-cutter.com).mp4" autoplay muted loop playsinline></video>
+
+                            <p class="title">Hearts of iron 4</p>
+                            <p class="activity">Активность в группе:<span class="activity-white"> нормально</span></p>
+                            <a class="more_button" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="games-item">
+                    <div class="games-item-inner">
+                        <div class="front">
+                            <img class="games-img" src="img/SCPsl.png" alt="SCP: Secret Laboratory">
+                        </div>
+                        <div class="back">
+                            <video class="background-video" src="video/Гляделки в SCP_SL!.mp4" autoplay muted loop playsinline></video>
+
+                            <p class="title">SCP: Secret Laboratory</p>
+                            <p class="activity">Активность в группе:<span class="activity-darkRed"> блокада</span></p>
+                            <a class="more_button" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="games-item">
+                    <div class="games-item-inner">
+                        <div class="front">
+                            <img class="games-img" src="img/MINECRAFT.jpg" alt="MINECRAFT">
+                        </div>
+                        <div class="back">
+                            <p class="title">Minecraft</p>
+                            <p class="activity">Активность в группе:<span class="activity-lime"> регулярно</span></p>
+                            <a class="more_button" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="games-item">
+                    <div class="games-item-inner">
+                        <div class="front">
+                            <img class="games-img" src="img/DECEIT.png" alt="Deceit">
+                        </div>
+                        <div class="back">
+                            <p class="title">Deceit</p>
+                            <p class="activity">Активность в группе:<span class="activity-darkRed"> очень редко</span></p>
+                            <a class="more_button" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="games-item">
+                    <div class="games-item-inner">
+                        <div class="front">
+                            <img class="games-img" src="img/WOT.png" alt="Wot">
+                        </div>
+                        <div class="back">
+                            <p class="title">War thunder</p>
+                            <p class="activity">Активность в группе:<span class="activity-lime"> регулярно</span></p>
+                            <a class="more_button" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="games-item">
+                    <div class="games-item-inner">
+                        <div class="front">
+                            <img class="games-img" src="img/FACTORIO.png" alt="Factorio">
+                        </div>
+                        <div class="back">
+                            <p class="title">Factorio</p>
+                            <p class="activity">Активность в группе:<span class="activity-black"> никогда</span></p>
+                            <a class="more_button" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="games-item">
+                    <div class="games-item-inner">
+                        <div class="front">
+                            <img class="games-img" src="img/TITANFALL2.png" alt="Titanfall 2">
+                        </div>
+                        <div class="back">
+                            <p class="title">Titanfall 2</p>
+                            <p class="activity">Активность в группе:<span class="activity-black"> никогда</span></p>
+                            <a class="more_button" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="games-item">
+                    <div class="games-item-inner">
+                        <div class="front">
+                            <img class="games-img" src="img/PUBG.png" alt="pubg">
+                        </div>
+                        <div class="back">
+                            <p class="title">Pubg</p>
+                            <p class="activity">Активность в группе:<span class="activity-darkRed"> очень редко</span></p>
+                            <a class="more_button" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </li>
+        </ul>
+    </div>
+</section>
+<section id="discord-widget" class="page">
+    <h2 class="own-discord">Наш Discord-сервер</h2>
+    <div class="container">
+        <div style="display: flex; justify-content: center;">
+            <iframe src="https://discord.com/widget?id=1136636008474083328&theme=dark" width="90%" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        </div>
+    </div>
+</section>
+<div id="developers" class="page">
+    <h2 class="section-title">Разработчики:</h2>
+    <div class="container-card">
+        <div class="card">
+            <img class="card-logo" src="icons/icons8-персонализация-windows-10-50.png" alt="Дизайн сайта">
+            <h3 class="card-title">Дизайн сайта</h3>
+            <hr>
+            <p class="card-text">Никита (fazennukkk).</p>
+            <p class="card-text">Тимофей (Timofey)</p>
+        </div>
+        <div class="card">
+            <img class="card-logo" src="icons/icons8-кодовый-файл-50.png" alt="Код">
+            <h3 class="card-title">Код</h3>
+            <hr>
+            <p class="card-text">Никита (fazennukkk).</p>
+        </div>
+        <div class="card">
+            <img class="card-logo" src="icons/icons8-менеджер-50.png" alt="Супервайзер">
+            <h3 class="card-title">Координатор</h3>
+            <hr>
+            <p class="card-text">Тимофей (Timofey)</p>
+        </div>
+    </div>
+</div>
+<section id="rules" class="page">
+    <a href="https://docs.google.com/document/d/1DugGJv-Yr0ewijhmeZKjRbvrPCvWOkAejOWvfA48UvQ/edit?pli=1&tab=t.0#heading=h.wjjph284ia1b" class="rules-card" target="_blank">
+        <img class="rules-card-logo" src="icons/icons8-интернет-50.png" alt="Конституция"><br>
+        <span class="card-title-con">Конституция</span>
+    </a>
+</section>
+<section id="activity" class="page">
+    <h3 class="section-title">Активность</h3>
+    <div class="container">
+
+        <div class="activity-container">
+            <div class="activity-card">
+                <h3 class="activity-card-title activity-10">[act+10] Превосходный Актив</h3>
+                <hr class="activity-10-hr">
+                <?xml version="1.0" encoding="iso-8859-1"?>
+                <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg class="activity-img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="611.996px" height="611.996px" viewBox="0 0 611.996 611.996" style="enable-background:new 0 0 611.996 611.996;"
+                     xml:space="preserve">
+                <g>
+                    <path fill="#002d00" d="M610.036,233.895c-4.704-14.45-17.468-25.211-32.524-27.424l-162.664-23.626L342.109,35.469
+                        c-6.715-13.653-20.882-22.479-36.099-22.479c-15.233,0-29.422,8.822-36.149,22.471L197.14,182.845l-162.698,23.63
+                        c-15.032,2.205-27.791,12.966-32.508,27.428c-4.691,14.471-0.683,30.674,10.205,41.275l117.697,114.75l-27.757,161.986
+                        c-2.601,14.989,3.68,30.459,15.997,39.403c6.913,5.028,15.107,7.688,23.702,7.688c6.513,0,12.996-1.598,18.741-4.615
+                        l145.492-76.489l145.484,76.489c5.741,3.018,12.216,4.615,18.724,4.615c8.587,0,16.776-2.659,23.689-7.688
+                        c12.317-8.957,18.602-24.423,16.018-39.387l-27.786-162.003l117.718-114.746C610.77,264.548,614.766,248.336,610.036,233.895z
+                         M588.083,263.106l-120.892,117.84c-1.985,1.939-2.896,4.729-2.424,7.465l28.541,166.383c1.501,8.691-2.153,17.679-9.315,22.893
+                        c-4.013,2.917-8.775,4.464-13.775,4.464c-3.785,0-7.545-0.928-10.875-2.681l-149.407-78.555c-1.231-0.645-2.576-0.965-3.925-0.965
+                        c-1.349,0-2.698,0.32-3.924,0.965L152.674,579.47c-7.739,4.063-17.628,3.351-24.688-1.787c-7.157-5.197-10.808-14.181-9.294-22.901
+                        l28.512-166.369c0.468-2.732-0.438-5.526-2.424-7.461L23.904,263.106c-6.332-6.167-8.662-15.588-5.939-23.984
+                        c2.744-8.409,10.176-14.673,18.914-15.959l167.074-24.267c2.744-0.4,5.122-2.125,6.348-4.616l74.681-151.363
+                        c3.912-7.938,12.165-13.067,21.029-13.067c8.84,0,17.068,5.125,20.975,13.071l74.706,151.359c1.231,2.491,3.6,4.215,6.349,4.616
+                        l167.035,24.263c8.764,1.29,16.194,7.549,18.935,15.971C596.754,247.515,594.432,256.927,588.083,263.106z"/>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                </svg>
+                
+                <p class="activity-card-text ">Максимальный уровень активности! Вы проводите много времени в группе каждый день и  вы всегда в центре событий и играете ключевую роль в жизни группы. </p>
+            </div>
+            <div class="activity-card">
+                <h3 class="activity-card-title activity-9">[act+9] Крайне Высокий Актив</h3>
+                <?xml version="1.0" encoding="iso-8859-1"?>
+                <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg class="activity-img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="611.996px" height="611.996px" viewBox="0 0 611.996 611.996" style="enable-background:new 0 0 611.996 611.996;"
+                     xml:space="preserve">
+                <g>
+                    <path fill="#004900" d="M610.036,233.895c-4.704-14.45-17.468-25.211-32.524-27.424l-162.664-23.626L342.109,35.469
+                        c-6.715-13.653-20.882-22.479-36.099-22.479c-15.233,0-29.422,8.822-36.149,22.471L197.14,182.845l-162.698,23.63
+                        c-15.032,2.205-27.791,12.966-32.508,27.428c-4.691,14.471-0.683,30.674,10.205,41.275l117.697,114.75l-27.757,161.986
+                        c-2.601,14.989,3.68,30.459,15.997,39.403c6.913,5.028,15.107,7.688,23.702,7.688c6.513,0,12.996-1.598,18.741-4.615
+                        l145.492-76.489l145.484,76.489c5.741,3.018,12.216,4.615,18.724,4.615c8.587,0,16.776-2.659,23.689-7.688
+                        c12.317-8.957,18.602-24.423,16.018-39.387l-27.786-162.003l117.718-114.746C610.77,264.548,614.766,248.336,610.036,233.895z
+                         M588.083,263.106l-120.892,117.84c-1.985,1.939-2.896,4.729-2.424,7.465l28.541,166.383c1.501,8.691-2.153,17.679-9.315,22.893
+                        c-4.013,2.917-8.775,4.464-13.775,4.464c-3.785,0-7.545-0.928-10.875-2.681l-149.407-78.555c-1.231-0.645-2.576-0.965-3.925-0.965
+                        c-1.349,0-2.698,0.32-3.924,0.965L152.674,579.47c-7.739,4.063-17.628,3.351-24.688-1.787c-7.157-5.197-10.808-14.181-9.294-22.901
+                        l28.512-166.369c0.468-2.732-0.438-5.526-2.424-7.461L23.904,263.106c-6.332-6.167-8.662-15.588-5.939-23.984
+                        c2.744-8.409,10.176-14.673,18.914-15.959l167.074-24.267c2.744-0.4,5.122-2.125,6.348-4.616l74.681-151.363
+                        c3.912-7.938,12.165-13.067,21.029-13.067c8.84,0,17.068,5.125,20.975,13.071l74.706,151.359c1.231,2.491,3.6,4.215,6.349,4.616
+                        l167.035,24.263c8.764,1.29,16.194,7.549,18.935,15.971C596.754,247.515,594.432,256.927,588.083,263.106z"/>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                </svg>
+                <hr class="activity-9-hr">
+                <p class="activity-card-text ">Вы почти на вершине! Частое присутствие и участие в группе делает вас заметным и важным участником.</p>
+            </div>
+            <div class="activity-card">
+                <h3 class="activity-card-title activity-8">[act+8] Очень Хороший Актив</h3>
+                <?xml version="1.0" encoding="iso-8859-1"?>
+                <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg class="activity-img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="611.996px" height="611.996px" viewBox="0 0 611.996 611.996" style="enable-background:new 0 0 611.996 611.996;"
+                     xml:space="preserve">
+                <g>
+                    <path fill="#006b00" d="M610.036,233.895c-4.704-14.45-17.468-25.211-32.524-27.424l-162.664-23.626L342.109,35.469
+                        c-6.715-13.653-20.882-22.479-36.099-22.479c-15.233,0-29.422,8.822-36.149,22.471L197.14,182.845l-162.698,23.63
+                        c-15.032,2.205-27.791,12.966-32.508,27.428c-4.691,14.471-0.683,30.674,10.205,41.275l117.697,114.75l-27.757,161.986
+                        c-2.601,14.989,3.68,30.459,15.997,39.403c6.913,5.028,15.107,7.688,23.702,7.688c6.513,0,12.996-1.598,18.741-4.615
+                        l145.492-76.489l145.484,76.489c5.741,3.018,12.216,4.615,18.724,4.615c8.587,0,16.776-2.659,23.689-7.688
+                        c12.317-8.957,18.602-24.423,16.018-39.387l-27.786-162.003l117.718-114.746C610.77,264.548,614.766,248.336,610.036,233.895z
+                         M588.083,263.106l-120.892,117.84c-1.985,1.939-2.896,4.729-2.424,7.465l28.541,166.383c1.501,8.691-2.153,17.679-9.315,22.893
+                        c-4.013,2.917-8.775,4.464-13.775,4.464c-3.785,0-7.545-0.928-10.875-2.681l-149.407-78.555c-1.231-0.645-2.576-0.965-3.925-0.965
+                        c-1.349,0-2.698,0.32-3.924,0.965L152.674,579.47c-7.739,4.063-17.628,3.351-24.688-1.787c-7.157-5.197-10.808-14.181-9.294-22.901
+                        l28.512-166.369c0.468-2.732-0.438-5.526-2.424-7.461L23.904,263.106c-6.332-6.167-8.662-15.588-5.939-23.984
+                        c2.744-8.409,10.176-14.673,18.914-15.959l167.074-24.267c2.744-0.4,5.122-2.125,6.348-4.616l74.681-151.363
+                        c3.912-7.938,12.165-13.067,21.029-13.067c8.84,0,17.068,5.125,20.975,13.071l74.706,151.359c1.231,2.491,3.6,4.215,6.349,4.616
+                        l167.035,24.263c8.764,1.29,16.194,7.549,18.935,15.971C596.754,247.515,594.432,256.927,588.083,263.106z"/>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                </svg>
+                <hr class="activity-8-hr">
+                <p class="activity-card-text">Ваш уровень активности стабильно высок. Вы участвуете в большинстве обсуждений и проявляете себя регулярно.
+                </p>
+            </div>
+            <div class="activity-card">
+                <h3 class="activity-card-title activity-7">[act+7] Отличный Актив</h3>
+                <?xml version="1.0" encoding="iso-8859-1"?>
+                <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg class="activity-img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="611.996px" height="611.996px" viewBox="0 0 611.996 611.996" style="enable-background:new 0 0 611.996 611.996;"
+                     xml:space="preserve">
+                <g>
+                    <path fill="#008400" d="M610.036,233.895c-4.704-14.45-17.468-25.211-32.524-27.424l-162.664-23.626L342.109,35.469
+                        c-6.715-13.653-20.882-22.479-36.099-22.479c-15.233,0-29.422,8.822-36.149,22.471L197.14,182.845l-162.698,23.63
+                        c-15.032,2.205-27.791,12.966-32.508,27.428c-4.691,14.471-0.683,30.674,10.205,41.275l117.697,114.75l-27.757,161.986
+                        c-2.601,14.989,3.68,30.459,15.997,39.403c6.913,5.028,15.107,7.688,23.702,7.688c6.513,0,12.996-1.598,18.741-4.615
+                        l145.492-76.489l145.484,76.489c5.741,3.018,12.216,4.615,18.724,4.615c8.587,0,16.776-2.659,23.689-7.688
+                        c12.317-8.957,18.602-24.423,16.018-39.387l-27.786-162.003l117.718-114.746C610.77,264.548,614.766,248.336,610.036,233.895z
+                         M588.083,263.106l-120.892,117.84c-1.985,1.939-2.896,4.729-2.424,7.465l28.541,166.383c1.501,8.691-2.153,17.679-9.315,22.893
+                        c-4.013,2.917-8.775,4.464-13.775,4.464c-3.785,0-7.545-0.928-10.875-2.681l-149.407-78.555c-1.231-0.645-2.576-0.965-3.925-0.965
+                        c-1.349,0-2.698,0.32-3.924,0.965L152.674,579.47c-7.739,4.063-17.628,3.351-24.688-1.787c-7.157-5.197-10.808-14.181-9.294-22.901
+                        l28.512-166.369c0.468-2.732-0.438-5.526-2.424-7.461L23.904,263.106c-6.332-6.167-8.662-15.588-5.939-23.984
+                        c2.744-8.409,10.176-14.673,18.914-15.959l167.074-24.267c2.744-0.4,5.122-2.125,6.348-4.616l74.681-151.363
+                        c3.912-7.938,12.165-13.067,21.029-13.067c8.84,0,17.068,5.125,20.975,13.071l74.706,151.359c1.231,2.491,3.6,4.215,6.349,4.616
+                        l167.035,24.263c8.764,1.29,16.194,7.549,18.935,15.971C596.754,247.515,594.432,256.927,588.083,263.106z"/>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                </svg>
+                <hr class="activity-7-hr">
+                <p class="activity-card-text">Вы часто принимаете участие в жизни группы и поддерживаете активную атмосферу.
+                </p>
+            </div>
+            <div class="activity-card">
+                <h3 class="activity-card-title activity-6">[act+6] Высокий Актив</h3>
+                <?xml version="1.0" encoding="iso-8859-1"?>
+                <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg class="activity-img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="611.996px" height="611.996px" viewBox="0 0 611.996 611.996" style="enable-background:new 0 0 611.996 611.996;"
+                     xml:space="preserve">
+                <g>
+                    <path fill="#049504" d="M610.036,233.895c-4.704-14.45-17.468-25.211-32.524-27.424l-162.664-23.626L342.109,35.469
+                        c-6.715-13.653-20.882-22.479-36.099-22.479c-15.233,0-29.422,8.822-36.149,22.471L197.14,182.845l-162.698,23.63
+                        c-15.032,2.205-27.791,12.966-32.508,27.428c-4.691,14.471-0.683,30.674,10.205,41.275l117.697,114.75l-27.757,161.986
+                        c-2.601,14.989,3.68,30.459,15.997,39.403c6.913,5.028,15.107,7.688,23.702,7.688c6.513,0,12.996-1.598,18.741-4.615
+                        l145.492-76.489l145.484,76.489c5.741,3.018,12.216,4.615,18.724,4.615c8.587,0,16.776-2.659,23.689-7.688
+                        c12.317-8.957,18.602-24.423,16.018-39.387l-27.786-162.003l117.718-114.746C610.77,264.548,614.766,248.336,610.036,233.895z
+                         M588.083,263.106l-120.892,117.84c-1.985,1.939-2.896,4.729-2.424,7.465l28.541,166.383c1.501,8.691-2.153,17.679-9.315,22.893
+                        c-4.013,2.917-8.775,4.464-13.775,4.464c-3.785,0-7.545-0.928-10.875-2.681l-149.407-78.555c-1.231-0.645-2.576-0.965-3.925-0.965
+                        c-1.349,0-2.698,0.32-3.924,0.965L152.674,579.47c-7.739,4.063-17.628,3.351-24.688-1.787c-7.157-5.197-10.808-14.181-9.294-22.901
+                        l28.512-166.369c0.468-2.732-0.438-5.526-2.424-7.461L23.904,263.106c-6.332-6.167-8.662-15.588-5.939-23.984
+                        c2.744-8.409,10.176-14.673,18.914-15.959l167.074-24.267c2.744-0.4,5.122-2.125,6.348-4.616l74.681-151.363
+                        c3.912-7.938,12.165-13.067,21.029-13.067c8.84,0,17.068,5.125,20.975,13.071l74.706,151.359c1.231,2.491,3.6,4.215,6.349,4.616
+                        l167.035,24.263c8.764,1.29,16.194,7.549,18.935,15.971C596.754,247.515,594.432,256.927,588.083,263.106z"/>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                </svg>
+                <hr class="activity-6-hr">
+                <p class="activity-card-text">Ваша активность заметна. Вы вносите вклад в обсуждения и поддерживаете динамику группы.
+                </p>
+            </div>
+            <div class="activity-card">
+                <h3 class="activity-card-title activity-5">[act+5] Хороший Актив</h3>
+                <?xml version="1.0" encoding="iso-8859-1"?>
+                <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg class="activity-img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="611.996px" height="611.996px" viewBox="0 0 611.996 611.996" style="enable-background:new 0 0 611.996 611.996;"
+                     xml:space="preserve">
+                <g>
+                    <path fill="#04c104" d="M610.036,233.895c-4.704-14.45-17.468-25.211-32.524-27.424l-162.664-23.626L342.109,35.469
+                        c-6.715-13.653-20.882-22.479-36.099-22.479c-15.233,0-29.422,8.822-36.149,22.471L197.14,182.845l-162.698,23.63
+                        c-15.032,2.205-27.791,12.966-32.508,27.428c-4.691,14.471-0.683,30.674,10.205,41.275l117.697,114.75l-27.757,161.986
+                        c-2.601,14.989,3.68,30.459,15.997,39.403c6.913,5.028,15.107,7.688,23.702,7.688c6.513,0,12.996-1.598,18.741-4.615
+                        l145.492-76.489l145.484,76.489c5.741,3.018,12.216,4.615,18.724,4.615c8.587,0,16.776-2.659,23.689-7.688
+                        c12.317-8.957,18.602-24.423,16.018-39.387l-27.786-162.003l117.718-114.746C610.77,264.548,614.766,248.336,610.036,233.895z
+                         M588.083,263.106l-120.892,117.84c-1.985,1.939-2.896,4.729-2.424,7.465l28.541,166.383c1.501,8.691-2.153,17.679-9.315,22.893
+                        c-4.013,2.917-8.775,4.464-13.775,4.464c-3.785,0-7.545-0.928-10.875-2.681l-149.407-78.555c-1.231-0.645-2.576-0.965-3.925-0.965
+                        c-1.349,0-2.698,0.32-3.924,0.965L152.674,579.47c-7.739,4.063-17.628,3.351-24.688-1.787c-7.157-5.197-10.808-14.181-9.294-22.901
+                        l28.512-166.369c0.468-2.732-0.438-5.526-2.424-7.461L23.904,263.106c-6.332-6.167-8.662-15.588-5.939-23.984
+                        c2.744-8.409,10.176-14.673,18.914-15.959l167.074-24.267c2.744-0.4,5.122-2.125,6.348-4.616l74.681-151.363
+                        c3.912-7.938,12.165-13.067,21.029-13.067c8.84,0,17.068,5.125,20.975,13.071l74.706,151.359c1.231,2.491,3.6,4.215,6.349,4.616
+                        l167.035,24.263c8.764,1.29,16.194,7.549,18.935,15.971C596.754,247.515,594.432,256.927,588.083,263.106z"/>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                </svg>
+                <hr class="activity-5-hr">
+                <p class="activity-card-text">Вы достаточно активны, регулярно появляетесь и участвуете в общении.
+                </p>
+            </div>
+            <div class="activity-card">
+                <h3 class="activity-card-title activity-4">[act+4] Нормальный Актив</h3>
+                <?xml version="1.0" encoding="iso-8859-1"?>
+                <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg class="activity-img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="611.996px" height="611.996px" viewBox="0 0 611.996 611.996" style="enable-background:new 0 0 611.996 611.996;"
+                     xml:space="preserve">
+                <g>
+                    <path fill="#5fad00" d="M610.036,233.895c-4.704-14.45-17.468-25.211-32.524-27.424l-162.664-23.626L342.109,35.469
+                        c-6.715-13.653-20.882-22.479-36.099-22.479c-15.233,0-29.422,8.822-36.149,22.471L197.14,182.845l-162.698,23.63
+                        c-15.032,2.205-27.791,12.966-32.508,27.428c-4.691,14.471-0.683,30.674,10.205,41.275l117.697,114.75l-27.757,161.986
+                        c-2.601,14.989,3.68,30.459,15.997,39.403c6.913,5.028,15.107,7.688,23.702,7.688c6.513,0,12.996-1.598,18.741-4.615
+                        l145.492-76.489l145.484,76.489c5.741,3.018,12.216,4.615,18.724,4.615c8.587,0,16.776-2.659,23.689-7.688
+                        c12.317-8.957,18.602-24.423,16.018-39.387l-27.786-162.003l117.718-114.746C610.77,264.548,614.766,248.336,610.036,233.895z
+                         M588.083,263.106l-120.892,117.84c-1.985,1.939-2.896,4.729-2.424,7.465l28.541,166.383c1.501,8.691-2.153,17.679-9.315,22.893
+                        c-4.013,2.917-8.775,4.464-13.775,4.464c-3.785,0-7.545-0.928-10.875-2.681l-149.407-78.555c-1.231-0.645-2.576-0.965-3.925-0.965
+                        c-1.349,0-2.698,0.32-3.924,0.965L152.674,579.47c-7.739,4.063-17.628,3.351-24.688-1.787c-7.157-5.197-10.808-14.181-9.294-22.901
+                        l28.512-166.369c0.468-2.732-0.438-5.526-2.424-7.461L23.904,263.106c-6.332-6.167-8.662-15.588-5.939-23.984
+                        c2.744-8.409,10.176-14.673,18.914-15.959l167.074-24.267c2.744-0.4,5.122-2.125,6.348-4.616l74.681-151.363
+                        c3.912-7.938,12.165-13.067,21.029-13.067c8.84,0,17.068,5.125,20.975,13.071l74.706,151.359c1.231,2.491,3.6,4.215,6.349,4.616
+                        l167.035,24.263c8.764,1.29,16.194,7.549,18.935,15.971C596.754,247.515,594.432,256.927,588.083,263.106z"/>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                </svg>
+                <hr class="activity-4-hr">
+                <p class="activity-card-text">Средний уровень активности. Вы участвуете время от времени, но без постоянного присутствия.
+                </p>
+            </div>
+            <div class="activity-card">
+                <h3 class="activity-card-title activity-3">[act+3] Не особый Актив</h3>
+                <?xml version="1.0" encoding="iso-8859-1"?>
+                <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg class="activity-img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="611.996px" height="611.996px" viewBox="0 0 611.996 611.996" style="enable-background:new 0 0 611.996 611.996;"
+                     xml:space="preserve">
+                <g>
+                    <path fill="#9daf00" d="M610.036,233.895c-4.704-14.45-17.468-25.211-32.524-27.424l-162.664-23.626L342.109,35.469
+                        c-6.715-13.653-20.882-22.479-36.099-22.479c-15.233,0-29.422,8.822-36.149,22.471L197.14,182.845l-162.698,23.63
+                        c-15.032,2.205-27.791,12.966-32.508,27.428c-4.691,14.471-0.683,30.674,10.205,41.275l117.697,114.75l-27.757,161.986
+                        c-2.601,14.989,3.68,30.459,15.997,39.403c6.913,5.028,15.107,7.688,23.702,7.688c6.513,0,12.996-1.598,18.741-4.615
+                        l145.492-76.489l145.484,76.489c5.741,3.018,12.216,4.615,18.724,4.615c8.587,0,16.776-2.659,23.689-7.688
+                        c12.317-8.957,18.602-24.423,16.018-39.387l-27.786-162.003l117.718-114.746C610.77,264.548,614.766,248.336,610.036,233.895z
+                         M588.083,263.106l-120.892,117.84c-1.985,1.939-2.896,4.729-2.424,7.465l28.541,166.383c1.501,8.691-2.153,17.679-9.315,22.893
+                        c-4.013,2.917-8.775,4.464-13.775,4.464c-3.785,0-7.545-0.928-10.875-2.681l-149.407-78.555c-1.231-0.645-2.576-0.965-3.925-0.965
+                        c-1.349,0-2.698,0.32-3.924,0.965L152.674,579.47c-7.739,4.063-17.628,3.351-24.688-1.787c-7.157-5.197-10.808-14.181-9.294-22.901
+                        l28.512-166.369c0.468-2.732-0.438-5.526-2.424-7.461L23.904,263.106c-6.332-6.167-8.662-15.588-5.939-23.984
+                        c2.744-8.409,10.176-14.673,18.914-15.959l167.074-24.267c2.744-0.4,5.122-2.125,6.348-4.616l74.681-151.363
+                        c3.912-7.938,12.165-13.067,21.029-13.067c8.84,0,17.068,5.125,20.975,13.071l74.706,151.359c1.231,2.491,3.6,4.215,6.349,4.616
+                        l167.035,24.263c8.764,1.29,16.194,7.549,18.935,15.971C596.754,247.515,594.432,256.927,588.083,263.106z"/>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                </svg>
+                <hr class="activity-3-hr">
+                <p class="activity-card-text">Ваше присутствие редкое, но вы всё же периодически принимаете участие.
+                </p>
+            </div>
+            <div class="activity-card">
+                <h3 class="activity-card-title activity-2">[act+2] Низкий Актив</h3>
+                <?xml version="1.0" encoding="iso-8859-1"?>
+                <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg class="activity-img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="611.996px" height="611.996px" viewBox="0 0 611.996 611.996" style="enable-background:new 0 0 611.996 611.996;"
+                     xml:space="preserve">
+                <g>
+                    <path fill="#d29c00" d="M610.036,233.895c-4.704-14.45-17.468-25.211-32.524-27.424l-162.664-23.626L342.109,35.469
+                        c-6.715-13.653-20.882-22.479-36.099-22.479c-15.233,0-29.422,8.822-36.149,22.471L197.14,182.845l-162.698,23.63
+                        c-15.032,2.205-27.791,12.966-32.508,27.428c-4.691,14.471-0.683,30.674,10.205,41.275l117.697,114.75l-27.757,161.986
+                        c-2.601,14.989,3.68,30.459,15.997,39.403c6.913,5.028,15.107,7.688,23.702,7.688c6.513,0,12.996-1.598,18.741-4.615
+                        l145.492-76.489l145.484,76.489c5.741,3.018,12.216,4.615,18.724,4.615c8.587,0,16.776-2.659,23.689-7.688
+                        c12.317-8.957,18.602-24.423,16.018-39.387l-27.786-162.003l117.718-114.746C610.77,264.548,614.766,248.336,610.036,233.895z
+                         M588.083,263.106l-120.892,117.84c-1.985,1.939-2.896,4.729-2.424,7.465l28.541,166.383c1.501,8.691-2.153,17.679-9.315,22.893
+                        c-4.013,2.917-8.775,4.464-13.775,4.464c-3.785,0-7.545-0.928-10.875-2.681l-149.407-78.555c-1.231-0.645-2.576-0.965-3.925-0.965
+                        c-1.349,0-2.698,0.32-3.924,0.965L152.674,579.47c-7.739,4.063-17.628,3.351-24.688-1.787c-7.157-5.197-10.808-14.181-9.294-22.901
+                        l28.512-166.369c0.468-2.732-0.438-5.526-2.424-7.461L23.904,263.106c-6.332-6.167-8.662-15.588-5.939-23.984
+                        c2.744-8.409,10.176-14.673,18.914-15.959l167.074-24.267c2.744-0.4,5.122-2.125,6.348-4.616l74.681-151.363
+                        c3.912-7.938,12.165-13.067,21.029-13.067c8.84,0,17.068,5.125,20.975,13.071l74.706,151.359c1.231,2.491,3.6,4.215,6.349,4.616
+                        l167.035,24.263c8.764,1.29,16.194,7.549,18.935,15.971C596.754,247.515,594.432,256.927,588.083,263.106z"/>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                </svg>
+                <hr class="activity-2-hr">
+                <p class="activity-card-text">Очень низкая активность. Возможно, стоит чаще заходить в группу и общаться?
+                </p>
+            </div>
+            <div class="activity-card">
+                <h3 class="activity-card-title activity-1">[act+1] Ужасный Актив</h3>
+                <?xml version="1.0" encoding="iso-8859-1"?>
+                <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg class="activity-img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="611.996px" height="611.996px" viewBox="0 0 611.996 611.996" style="enable-background:new 0 0 611.996 611.996;"
+                     xml:space="preserve">
+                <g>
+                    <path fill="#c85300" d="M610.036,233.895c-4.704-14.45-17.468-25.211-32.524-27.424l-162.664-23.626L342.109,35.469
+                        c-6.715-13.653-20.882-22.479-36.099-22.479c-15.233,0-29.422,8.822-36.149,22.471L197.14,182.845l-162.698,23.63
+                        c-15.032,2.205-27.791,12.966-32.508,27.428c-4.691,14.471-0.683,30.674,10.205,41.275l117.697,114.75l-27.757,161.986
+                        c-2.601,14.989,3.68,30.459,15.997,39.403c6.913,5.028,15.107,7.688,23.702,7.688c6.513,0,12.996-1.598,18.741-4.615
+                        l145.492-76.489l145.484,76.489c5.741,3.018,12.216,4.615,18.724,4.615c8.587,0,16.776-2.659,23.689-7.688
+                        c12.317-8.957,18.602-24.423,16.018-39.387l-27.786-162.003l117.718-114.746C610.77,264.548,614.766,248.336,610.036,233.895z
+                         M588.083,263.106l-120.892,117.84c-1.985,1.939-2.896,4.729-2.424,7.465l28.541,166.383c1.501,8.691-2.153,17.679-9.315,22.893
+                        c-4.013,2.917-8.775,4.464-13.775,4.464c-3.785,0-7.545-0.928-10.875-2.681l-149.407-78.555c-1.231-0.645-2.576-0.965-3.925-0.965
+                        c-1.349,0-2.698,0.32-3.924,0.965L152.674,579.47c-7.739,4.063-17.628,3.351-24.688-1.787c-7.157-5.197-10.808-14.181-9.294-22.901
+                        l28.512-166.369c0.468-2.732-0.438-5.526-2.424-7.461L23.904,263.106c-6.332-6.167-8.662-15.588-5.939-23.984
+                        c2.744-8.409,10.176-14.673,18.914-15.959l167.074-24.267c2.744-0.4,5.122-2.125,6.348-4.616l74.681-151.363
+                        c3.912-7.938,12.165-13.067,21.029-13.067c8.84,0,17.068,5.125,20.975,13.071l74.706,151.359c1.231,2.491,3.6,4.215,6.349,4.616
+                        l167.035,24.263c8.764,1.29,16.194,7.549,18.935,15.971C596.754,247.515,594.432,256.927,588.083,263.106z"/>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                </svg>
+                <hr class="activity-1-hr">
+                <p class="activity-card-text">Почти полное отсутствие активности. Это ваш последний шанс проявить себя.
+                </p>
+            </div>
+            <div class="activity-card">
+                <h3 class="activity-card-title activity-0">[act-0] Мертв</h3>
+                <?xml version="1.0" encoding="iso-8859-1"?>
+                <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg class="activity-img" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="611.996px" height="611.996px" viewBox="0 0 611.996 611.996" style="enable-background:new 0 0 611.996 611.996;"
+                     xml:space="preserve">
+                <g>
+                    <path fill="#e25700" d="M610.036,233.895c-4.704-14.45-17.468-25.211-32.524-27.424l-162.664-23.626L342.109,35.469
+                        c-6.715-13.653-20.882-22.479-36.099-22.479c-15.233,0-29.422,8.822-36.149,22.471L197.14,182.845l-162.698,23.63
+                        c-15.032,2.205-27.791,12.966-32.508,27.428c-4.691,14.471-0.683,30.674,10.205,41.275l117.697,114.75l-27.757,161.986
+                        c-2.601,14.989,3.68,30.459,15.997,39.403c6.913,5.028,15.107,7.688,23.702,7.688c6.513,0,12.996-1.598,18.741-4.615
+                        l145.492-76.489l145.484,76.489c5.741,3.018,12.216,4.615,18.724,4.615c8.587,0,16.776-2.659,23.689-7.688
+                        c12.317-8.957,18.602-24.423,16.018-39.387l-27.786-162.003l117.718-114.746C610.77,264.548,614.766,248.336,610.036,233.895z
+                         M588.083,263.106l-120.892,117.84c-1.985,1.939-2.896,4.729-2.424,7.465l28.541,166.383c1.501,8.691-2.153,17.679-9.315,22.893
+                        c-4.013,2.917-8.775,4.464-13.775,4.464c-3.785,0-7.545-0.928-10.875-2.681l-149.407-78.555c-1.231-0.645-2.576-0.965-3.925-0.965
+                        c-1.349,0-2.698,0.32-3.924,0.965L152.674,579.47c-7.739,4.063-17.628,3.351-24.688-1.787c-7.157-5.197-10.808-14.181-9.294-22.901
+                        l28.512-166.369c0.468-2.732-0.438-5.526-2.424-7.461L23.904,263.106c-6.332-6.167-8.662-15.588-5.939-23.984
+                        c2.744-8.409,10.176-14.673,18.914-15.959l167.074-24.267c2.744-0.4,5.122-2.125,6.348-4.616l74.681-151.363
+                        c3.912-7.938,12.165-13.067,21.029-13.067c8.84,0,17.068,5.125,20.975,13.071l74.706,151.359c1.231,2.491,3.6,4.215,6.349,4.616
+                        l167.035,24.263c8.764,1.29,16.194,7.549,18.935,15.971C596.754,247.515,594.432,256.927,588.083,263.106z"/>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                </svg>
+                <hr class="activity-0-hr">
+                <p class="activity-card-text">Полное отсутствие активности. Вы не участвуете в жизни группы и даже не отвечаете на пинги и звонки.
+                </p>
+            </div>
+            
+            <div id="party10-details" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeDetails(event, 'party10-details')">&times;</span>
+                    <p class="modal-text">
+                        Чат:
+                        <br><br>
+                        Максимальный Уровень Актива за общение только через чат это act+5 <br>
+                        Это зависит от того на сколько часто вы общаетесь и как часто отвечаете на сообщение. Но проще всего создать свою партию и предлагать идеи для развития группы.
+                        <br><br>
+                        Игровые (голосовые чаты): <br>
+                        За актив в голосовых чатах (с микро и с участием в играх) вы можете получить любой уровень актива. Но если вы просто говорите в голосовом чате (не играя), то максимальный актив это 9.
+                        <br><br>
+                        Опросы: <br>
+                        Если вы не пишите в чат и не сидите в голосовых, но вы голосуете на выборах и в опросах то максимальный актив это 3. (Это если вы только голосуете)
+                        <br><br>
+                        Репутация: <br>
+                        Для повышения репутации для себя, вам нужен уровень актива. Подробнее можете прочитать в описании канала #запросы-на-репутацию
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="reputation" class="page">
+    <h3 class="section-title">Репутация</h3>
+    <div class="container">
+
+        <div class="reputation">
+            <div class="reputation-left">
+                <h4>Своя Репутация:</h4>
+                <p>Актив 3 и ниже: Максимально на 1</p>
+                <p>Актив 4-6: Максимально на 2</p>
+                <p>Актив 7-8: Максимально на 3</p>
+                <p>Актив 9: Максимально на 4</p>
+                <p>Актив 10: Неограниченно</p>
+            </div>
+            <div class="separator"></div>
+            <div class="reputation-right">
+                <h4>Чужая Репутация:</h4>
+                <p>Репутация -2 и ниже: Изменение Максимально на 1</p>
+                <p>Репутация -1 – +1: Изменение Максимально на 2</p>
+                <p>Репутация +2: Изменение Максимально на 3</p>
+                <p>Репутация +3: Изменение Максимально на 4</p>
+                <p>Репутация +4: Изменение Максимально на 7</p>
+                <p>Репутация +5: Изменение Неограниченно</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="parties" class="page">
+    <h3 class="section-title">Партии</h3>
+    <div class="container">
+
+        <div class="parties">
+            
+            <div class="party" onclick="openDetails('party1-details')">
+                <img src="img/LGflag.png" alt="Символ партии" class="party-flag">
+                <img src="img/LR.png" alt="Символ партии" class="party-symbol" id="party-symbol-1">
+              
+                <h2 class="party-header">Либеральный Рассвет</h2>
+                <button class="details-btn">Подробнее</button>
+            </div>
+            
+            <div id="party1-details" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeDetails(event, 'party1-details')">&times;</span>
+                    <p class="modal-text">
+                        Лидер партии: Timofey Krymchenko
+                        <br><br>
+                        Идеология: Демократический-Либертарианизм
+                        <br><br>
+                        Позиция Полит. Режима: Сильно Либеральная
+                        <br><br>
+                        Полит. Сторона: Правая
+                        <br><br>
+                        Цели Партии: Политизация Либеральной Группы. Развитие либеральной свободы и демократии. Устранение ненависти к ЛГБТ,  фурри и другим субкультурам. Создание демократичной и влиятельной системы репутации (возвышение за высокую репутацию). Развитие группы с упором на личные достижения участников, их уникальность и их точки зрения.
+                        <br><br>
+                        Союзники партии: отсутствует
+                        <br><br>
+                        <a href="https://liberaldawn.carrd.co" class="a-card-lr" target="_blank">
+                            <span >Сайт партии</span>
+                        </a>
+                        <br><br>
+                        Описание партии: Либеральный Рассвет это единственная правая, и демократически либертариальная партия Либеральной Группы. Партия выступает за защиту демократии и либеральных принципов.
+                        ЛР выступает за очень ограниченное правительство, которое существует для защиты прав и демократичности выборов. Так-же ЛР поддержует фактическое отсутствие правил и поддержку нынешней конституции. Партия открыто поддержует публичные дискуссии и дебаты для получения более свободной системы изменений в группе. Наша партия развивает правую систему и не вмешивается в экономику и проекты группы. Одна из наших основных задач это антиконсерватизм, наша партия категорически против консервативных ценностей и идеологий из-за замедления развития мира с их стороны.
+                        Как анти-консерватисты мы категорически отвергаем религию, традициональные ценности и неоправданую дискриминацию. Мы видим будущее мира, но для его достижения нужно повышать свободу для молодёжи и внедрять новые системы для образования, медицины и социальных программ. Мы отвергаем идеи о 'поддержки семьи', мы считаем что права есть у всех и их сексуальная ориентация не должна на это влиять. Мы поддерживаем ЛГБТК+ и считаем что ограничивать их в нормальной развитой стране/группе это не правильно. Одна из ключевых идей созданных Либеральным Рассветом это система репутации с прямой демократией, мы за развитие этой системы. Как либертарианская партия мы за личную ответственность, ваши проблемы в группе должны решатся вами. ЛР поддержует идею о свободной критике, дискуссиях и спорах во всех понятиях, будь то оскорбления чей-то точки зрения или обсуждения проблем группы. Мы выступаем против правил которые запрещяют говорить и писать то что вы хотите.
+                        Форма управления: Прямая Демократия
+                        <br><br>
+                        Форма Правления: Прямая демократия
+                        <br><br>
+                        Поддержка гегемонии: Прозападная
+                        <br><br>
+                        Девиз партии: Развитие свободы - Приближение будущего <br><br>
+                        <img src="img/Political-compas-LR.png" alt="" class="pol-kom-img">
+                    </p>
+                </div>
+            </div>
+            <div class="party" onclick="openDetails('party2-details')">
+                <img src="img/Neflag.png" alt="Символ партии" class="party-flag">
+                <img src="img/Ne.png" alt="Символ партии" class="party-symbol" id="party-symbol-2">
+         
+                <h2 class="party-header">Новая Эра</h2>
+                <button class="details-btn">Подробнее</button>
+            </div>
+            
+            <div id="party2-details" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeDetails(event, 'party2-details')">&times;</span>
+                        <p class="modal-text">
+                            Лидер партии: Nikita Sushko (fazennukkk)
+                            <br><br>
+                            Идеология: Либеральная демократия
+                            <br><br>
+                            Позиция Политического Режима: Либерально-демократическая
+                            <br><br>
+                            Политическая Сторона: Лево-центрийский
+                            <br><br>
+                            Цели партии: Поддержка свободы выражения мнений и защиты прав всех участников.
+                            <br><br>
+                            Союзники партии: Нету
+                            <br><br>
+                            Описание партии: Мы - право-центрийская партия которая ставим в центр своего внимания свободу и прогресс для всех. Мы стремимся создать общество, где каждый человек сможет доступно говорить о своих интересах/религии/веры, и жить без ограничений. Мы поддерживаем демократические ценности и прогрессивные идеи, стремясь развивать и улучшать наш сервер, делая его местом, где каждый может быть собой. Мы против полного экономического равенства, но за свободу в выборе и справедливое распределение возможностей. Наша партия поддерживает равенство прав для всех, включая ЛГБТ-сообщество, и также выступает против давления на традиционые взгляды и религиозных убеждения.
+                            <br><br>
+                            Форма Правления: Прямая демократия
+                            <br><br>
+                            Поддержка гегемонии: Прозападная
+                            <br><br>
+                            Девиз партии: Свобода для каждого, прогресс для всех!
+                            <br><br>
+                            <img src="img/Political-kompas.NE.png" alt="" class="pol-kom-img">
+                        </p>
+                </div>
+            </div>
+            <div class="party" onclick="openDetails('party3-details')">
+                <img src="img/DNLflag.png" alt="Символ партии" class="party-flag">
+                <img src="img/Yarik parti.png" alt="Символ партии" class="party-symbol" id="party-symbol-3">
+
+                <h2 class="party-header">Истенные Европы</h2>
+                <button class="details-btn">Подробнее</button>
+            </div>
+            
+            <div id="party3-details" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeDetails(event, 'party3-details')">&times;</span>
+                        <p class="modal-text">
+                            Главари партии: @Нарциссический Нацист 
+                            <br><br>
+                            Идеология: Нео-Нацизм 
+                            <br><br>
+                            Политический Режим: Тоталитаризм
+                            <br><br>
+                            Политическая Сторона: Левые
+                            <br><br>
+                            Цели Партии: установление справедливости, радикальные действия для установления совершенства, поддержание идей консерватизма, закрепление политики в группе, исключение бесполезных участников
+                            <br><br>
+                            Союзники Партии: --
+                            <br><br>
+                            Описание Партии: Мы нацисты, НО:<br>1. Мы не являемся ярыми поклонниками антисемитизма.<br>2. Мы консервативны, однако поддерживаем идеи развития технологий, науки и прогресс во всех сферах людской жизнедеятельности. При этом мы выступаем за важность сохранения культурного достояния человечества.<br>3. Мы не являемся тотальными диктаторами и выступаем за сохранность человеческих свобод. Мы не хотим уничтожить всё новое, мы хотим урегулировать его и анализировать его влияние на общество. <br>4. Мы не поддерживаем идеи Маркса. Мы хотим, чтоб люди не были были оскорблены теми, кто выше них по тем или иным параметрам.<br>5. Мы считаем, что участники группы должны влиять на решения власти. Республика -- путь к успехуТеперь заявим о наших целях в Либеральной Группе:● Мы хотим сделать группу более равной. Кому нравится быть униженным? В Группе это, к сожалению, очень популярно. Говори всё что хочешь, делай что хочешь, унижай, оскорбляй и ничего тебе не будет... Разве этого вы хотите?● Мы хотим ввести Конституцию, которая будет действовать. Вы когда либо видели человека, который ввел четкие правила для каждого участника группы? Для всех, без исключения. Мы не говорим о сегодняшней Конституции, она действует, но в Группе нет правил. Разве это верно? Человек должен быть ограничен, благодаря этому мы научимся уважать и ценить, а не устраивать полную анархию, наносящую сокрушительный удар по порядочности и структрурированности Либеральной Группы
+                            <br><br>
+                            Поддержка гегемонии: ---
+                            <br><br>
+                            Девиз Партии: "Долой нечестивый либерализм!"<br><br>
+                        </p>
+                </div>
+            </div>
+            <div class="party" onclick="openDetails('party4-details')">
+                <img src="img/Rflag.png" alt="Символ партии" class="party-flag">
+                <img src="img/R.symbol.png" alt="Символ партии" class="party-symbol" id="party-symbol-4">
+         
+                <h2 class="party-header">Республиканцы</h2>
+                <button class="details-btn">Подробнее</button>
+            </div>
+            
+            <div id="party4-details" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeDetails(event, 'party4-details')">&times;</span>
+                    <p class="modal-text">
+                        Лидер партии: @Excel 
+                        <br><br>
+                        Идеология: Консерватизм либерализм
+                        <br><br>
+                        Позиция Политического Режима: Либеральная
+                        <br><br>
+                        Политическая Сторона: Правая
+                        <br><br>
+                        Цели партии: Мы хотим сделать сенат. Ещё, мы попытаемся улучить сервер. 
+                        <br><br>
+                        Союзники партии: отсутствует 
+                        <br><br>
+                        Описание партии:Наша партия поддерживаем свободные права в группе и за стабильные правила. Мы за либеральное отношение в группе.  А теперь про политику. Мы выступаем на стороне Украины в этом конфликте. Нашы враги это коммунисты и тоталитарные. Наша партия создана по мотивам Украинской нынешней партии. Мы будем против Артёма. Мы за свободную экономику .
+                        <br><br>
+                        Поддержка гегемонии: Прозападная
+                        <br><br>
+                        Девиз партии: Сделаем это вместе!</p><br><br>
+                        <img src="img/Political-compas-R.png" alt="" class="pol-kom-img">
+                    </p>
+                </div>
+            </div>
+            <div class="party" onclick="openDetails('party5-details')">
+                <img src="img/PDP_flag.png" alt="Символ партии" class="party-flag">
+                <img src="img/PDP.png" alt="Символ партии" class="party-symbol" id="party-symbol-5">
+         
+                <h2 class="party-header">Партия Демократического Прогресса</h2>
+                <button class="details-btn">Подробнее</button>
+            </div>
+            
+            <div id="party5-details" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeDetails(event, 'party5-details')">&times;</span>
+                    <p class="modal-text">
+                        Лидер партии: @Timofei_WT<br><br>Идеология: Социал-Демократия<br><br>Позиция Политического Режима: Либерально центральная<br><br>Политическая Сторона: Лево-центрийская<br><br>Цели партии: Социальная справедливость, гендерное равенство, свобода ориентации, правильная экономика.<br><br>Союзники партии: нет<br><br>Описание партии: ПДП поддержует цели социал демократии. Наша партия существует для достижения социальной справедливости. Мы поддержуем небольшую регулировку экономики для большой честности и справедливости. Мы выступаем за права людей и мы за сохранение демократического режима. Так же мы против ограничений прав, конкретных участников, лучше или бан или участие без ограничений. Наша партия открыто против Водного Мира и Артёма в целом (artemstorm).<br><br>Поддержка гегемонии: Прозападная<br><br>Девиз партии: Сила в справедливости, прогресс в единстве!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Navigation Script -->
+<script>
+    function loadPage(pageId) {
+        const pages = document.querySelectorAll(".page");
+        pages.forEach(page => page.style.display = "none");
+        document.getElementById(pageId).style.display = "block";
+    }
+
+    function init() {
+        const pages = document.querySelectorAll(".page");
+        pages.forEach(page => page.style.display = "none");
+
+        const hash = window.location.hash.substring(1);
+        loadPage(hash || 'home');
+    }
+
+    window.onload = init;
+    window.onhashchange = init;
+
+    // Scroll to top button functionality
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    window.onscroll = function() { toggleScrollTopBtn() };
+
+    function toggleScrollTopBtn() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollTopBtn.style.display = "block";
+        } else {
+            scrollTopBtn.style.display = "none";
+        }
+    }
+
+    scrollTopBtn.onclick = function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    function openDetails(modalId) {
+    // Открытие модального окна
+    var modal = document.getElementById(modalId);
+    modal.style.display = "block";
+    
+    // Добавляем класс для анимации появления
+    modal.classList.remove('fade-out'); // Убираем класс для анимации исчезновения, если он был
+    modal.classList.add('fade-in'); // Добавляем класс для анимации появления
+    
+    // Блокировка прокрутки страницы
+ЦЦЦ
+}
+
+function closeDetails(event, modalId) {
+    // Закрываем модальное окно, если кликнули вне контента или на кнопку закрытия
+    var modal = document.getElementById(modalId);
+    
+    if (event.target === modal || event.target.classList.contains('close')) {
+        modal.classList.remove('fade-in'); // Убираем класс для анимации появления
+        modal.classList.add('fade-out'); // Добавляем класс для анимации исчезновения
+        
+        // Разрешаем прокрутку страницы после задержки
+        setTimeout(function() {
+            modal.style.display = "none"; // Скрыть окно после анимации
+            document.body.style.overflow = "auto"; // Разрешить прокрутку
+        }, 300); // Задержка соответствует времени анимации исчезновения
+    }
+}
+</script>
+</body>
+</html>
